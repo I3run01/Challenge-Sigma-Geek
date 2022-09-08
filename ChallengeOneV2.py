@@ -16,6 +16,8 @@ while charactersNumber > 2:
         for c in range (0, round((charactersNumber/2)+0.1)):
             if(stringNum[c] == stringNum[(charactersNumber-1)-c]):
                 repeatLetter += 1
+            else:
+                break
 
         if(repeatLetter == round((charactersNumber/2)+0.1)):
             num = float(stringNum)
@@ -34,7 +36,7 @@ while charactersNumber > 2:
         start +=  1
     charactersNumber -= 1
 
-    if(list > 0):
+    if(len(list) > 0):
         break
 
     
