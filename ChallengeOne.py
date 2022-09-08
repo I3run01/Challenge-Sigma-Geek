@@ -4,7 +4,7 @@ start = 0
 list = []
 charactersNumber = 9
 
-print('start')
+print('running')
 while start <= (len(pi)-charactersNumber):
     stringNum = pi[start: start + charactersNumber]
 
@@ -30,7 +30,7 @@ while start <= (len(pi)-charactersNumber):
 
     start +=  1
 
-print('All numbers')
+print('All numbers:')
 for c in list:
     print(c)
 
