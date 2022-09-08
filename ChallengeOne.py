@@ -30,7 +30,11 @@ while start <= (len(pi)-charactersNumber):
 
     start +=  1
 
+print('All numbers')
 for c in list:
     print(c)
+
+print(f'First number: {list[0]}')
+
     
 print('finished')
