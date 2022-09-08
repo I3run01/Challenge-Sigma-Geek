@@ -35,6 +35,5 @@ for c in list:
     print(c)
 
 print(f'First number: {list[0]}')
-
     
 print('finished')
