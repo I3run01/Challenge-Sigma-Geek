@@ -11,7 +11,7 @@ charactersNumber = 21
 piStart = 900000
 
 print('running')
-print('')
+print(100*'-')
 
 while True:
 
@@ -21,7 +21,9 @@ while True:
             break
         except:
             sleep(2)
-            print('trying')
+            print(f'PiStart now is -> {piStart}')
+            print('Erro, trying again')
+            print(20*'-')
             
     start = 0
 
@@ -53,10 +55,8 @@ while True:
     piStart += 800
     if(len(list) > 0):
         break
-    
 
-
+print(100*'-')
 print(f'number: {list[0]}')
-
-print('')
+print(100*'-')
 print('finished')
