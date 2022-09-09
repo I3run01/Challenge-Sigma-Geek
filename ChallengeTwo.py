@@ -1,18 +1,28 @@
-from piNumber import pi
 import json, requests
-import math
+from time import sleep
+
+def request():
+    response = requests.get(f'https://api.pi.delivery/v1/pi?start={piStart}&numberOfDigits=900')
+    json_data = json.loads(response.text)
+    return str(json_data['content'])
 
 list = []
-charactersNumber = 9
-piStart = 0
+charactersNumber = 21
+piStart = 900000
 
 print('running')
 print('')
 
 while True:
-    response = requests.get(f'https://api.pi.delivery/v1/pi?start={piStart}&numberOfDigits=100')
-    json_data = json.loads(response.text)
-    pi = str(json_data['content'])
+
+    while True:
+        try:
+            pi = request()
+            break
+        except:
+            sleep(2)
+            print('trying')
+            
     start = 0
 
     while start <= (len(pi)-charactersNumber):
@@ -40,15 +50,13 @@ while True:
 
         start +=  1
 
-    piStart += 80
+    piStart += 800
     if(len(list) > 0):
         break
     
 
-if(len(list) > 0):
-    print(f'number: {list[0]}')
 
-else:
-    print('no number was found')
+print(f'number: {list[0]}')
+
 print('')
 print('finished')
