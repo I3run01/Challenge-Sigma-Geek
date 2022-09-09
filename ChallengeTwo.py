@@ -8,7 +8,7 @@ def request():
 
 list = []
 charactersNumber = 21
-piStart = 900000
+piStart = 13926400
 
 print('running')
 print(100*'-')
