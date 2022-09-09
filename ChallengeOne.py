@@ -28,12 +28,11 @@ while start <= (len(pi)-charactersNumber):
         if flag == False:
             list.append(num)
 
+    if(len(list) > 0):
+        break
+
     start +=  1
 
-print('All numbers:')
-for c in list:
-    print(c)
-
-print(f'First number: {list[0]}')
+print(f'number: {list[0]}')
     
 print('finished')
